@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>My Dream House 🏡</title>
+<style>
+ 
+  :root {
+    --bg-color: #faf4ef;         
+    --text-color: #5c3a21;         
+    --accent-color:  #808080;       
+    --button-bg: #f7d9db;         
+    --button-text: #5c2a2a;        
+    --link-color: #c76a8c;         
+  }
+
+ 
+  body.dark {
+    --bg-color: #2e2b26;
+    --text-color: #e0d8c3;
+    --accent-color: #f4c2c2;
+    --button-bg: #5c2a2a;
+    --button-text: #f7d9db;
+    --link-color: #e0a5b5;
+  }
+
+ 
+  body {
+    background-image: url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/170/469/original/images.jpeg?1752491478');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    line-height: 1.6;
+    position: relative;
+    min-height: 100vh;
+  }
+
+
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(250, 244, 239, 0.75);
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  h1, h2 {
+    text-align: center;
+    margin-bottom: 0.3em;
+  }
+
+  p {
+    max-width: 700px;
+    margin: 0 auto 1.5em auto;
+    font-size: 1.1em;
+    color: var(--accent-color);
+    text-align: center;
+  }
+
+  .image-container {
+    max-width: 600px;
+    margin: 1em auto;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 0 15px var(--accent-color);
+  }
+
+  img {
+    width: 100%;
+    display: block;
+    border-radius: 15px;
+    animation: pulse 5s infinite ease-in-out;
+  }
+
+  
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+      filter: brightness(1);
+    }
+    50% {
+      transform: scale(1.05);
+      filter: brightness(1.1);
+    }
+  }
+
+  .features {
+    max-width: 700px;
+    margin: 2em auto;
+    background-color: var(--button-bg);
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  .features h2 {
+    color: var(--text-color);
+  }
+
+  .features ul {
+    list-style-type: disc;
+    padding-left: 1.2em;
+    color: var(--text-color);
+  }
+
+  .features ul li {
+    margin-bottom: 0.6em;
+  }
+
+  .link-button {
+    display: inline-block;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 1em auto;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  }
+
+  .link-button:hover {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+  }
+
+  a {
+    color: var(--link-color);
+    text-decoration: underline;
+  }
+
+  a:hover {
+    color: var(--text-color);
+  }
+
+ 
+  .toggle-btn {
+    display: block;
+    margin: 2em auto;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    padding: 10px 25px;
+    font-size: 1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  }
+
+  .toggle-btn:hover {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+  }
+
+ 
+  .gallery {
+    max-width: 900px;
+    margin: 2em auto;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+  }
+
+  .gallery img {
+    width: 30%;
+    border-radius: 12px;
+    box-shadow: 0 0 10px var(--accent-color);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    animation: pulse 5s infinite ease-in-out;
+  }
+
+  .gallery img:hover {
+    transform: scale(1.05);
+  }
+</style>
+</head>
+<body>
+
+<h1>Welcome to My Dream House 🏡</h1>
+<p>This is the house I've always imagined—calm, cozy, and filled with light.</p>
+
+<div class="image-container">
+  <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/170/468/original/white-home-exterior-ideas-007.jpeg?1752491307" alt="My Dream House" />
+</div>
+
+<div class="features">
+  <h2>Why This Is My Dream Home</h2>
+  <p>Every corner of this house tells a story and offers something special:</p>
+  <ul>
+    <li>A breathtaking view of the sunrise that fills every morning with hope and warmth.</li>
+    <li>A secret library tucked behind a sliding bookshelf where I can lose myself in worlds of imagination.</li>
+    <li>The perfect kitchen with sunlight streaming in, designed for creating delicious meals and memories.</li>
+    <li>Spacious, airy rooms that feel both luxurious and inviting.</li>
+    <li>A cozy fireplace for chilly evenings and heartfelt conversations.</li>
+  </ul>
+  <p>It’s more than just a house — it’s the perfect place for me to live, grow, and dream.</p>
+</div>
+
+<a href="#features" class="link-button" aria-label="Learn more about features">Explore Features</a>
+
+<section class="gallery" aria-label="Gallery of additional images">
+  <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/170/470/original/interior.jpg?1752491560" alt="Cozy living room" />
+  <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/170/473/original/kitchen.jpeg?1752492453s" alt="Beautiful kitchen" />
+  <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/170/469/original/images.jpeg?1752491478" alt="Peaceful garden" />
+  <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/170/472/original/decorating-with-white.jpg?1752491607" alt="additional space" />
+</section>
+
+<button class="toggle-btn" id="themeToggle">Switch to Dark Mode</button>
+
+<script>
+  const toggleBtn = document.getElementById('themeToggle');
+  const body = document.body;
+
+  toggleBtn.addEventListener('click', () => {
+    body.classList.toggle('dark');
+
+    if(body.classList.contains('dark')) {
+      toggleBtn.textContent = 'Switch to Light Mode';
+    } else {
+      toggleBtn.textContent = 'Switch to Dark Mode';
+    }
+  });
+</script>
+<footer>Coded with 🩷 by Jabulile Msibi</footer>
+</body>
+</html>
